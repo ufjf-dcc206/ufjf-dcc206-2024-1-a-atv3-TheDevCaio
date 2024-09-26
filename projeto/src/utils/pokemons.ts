@@ -1,5 +1,9 @@
 export async function fetchRandomPokemon() {
-    const pokemonIds = Array.from({ length: 10 }, () => Math.floor(Math.random() * 898) + 1);
-    const promises = pokemonIds.map(id => fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(res => res.json()));
-    return Promise.all(promises);
-  }
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+  const data = await response.json();
+  
+  return await Promise.all(data.results.map(async (pokemon: any) => {
+      const pokemonDetails = await fetch(pokemon.url);
+      return await pokemonDetails.json(); 
+  }));
+}

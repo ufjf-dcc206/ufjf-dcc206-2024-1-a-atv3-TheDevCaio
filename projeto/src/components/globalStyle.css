@@ -11,24 +11,36 @@ body {
   }
   
   #game-area {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    width: 90vw;
     gap: 20px;
-    max-width: 800px;
+    background: grey;
     margin: 0 auto;
   }
+
+  #containerPai {
+  display: flex;
+  flex-direction: column;
+  }
+  
   
   .player-area {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #000000;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    height: 200px;
+    min-height: 100%;
+  }
+  
+  .play-area {
+    width: 100%;
     background-color: #ffffff;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 8px;
-    min-height: 200px;
-  }
-  
-  .play-area {
-    background-color: #e0e0e0;
-    border: 2px dashed #888;
-    border-radius: 8px;
-    min-height: 200px;
+    height: 400px;
+    min-height: 100%;
   }
