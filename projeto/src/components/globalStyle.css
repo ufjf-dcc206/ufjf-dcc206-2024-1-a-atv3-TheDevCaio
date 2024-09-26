@@ -4,26 +4,24 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #f0f0f0;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 20px;
-  }
-  
-  #game-area {
+}
+
+#game-area {
     width: 90vw;
     gap: 20px;
-    background: grey;
     margin: 0 auto;
-  }
+}
 
-  #containerPai {
-  display: flex;
-  flex-direction: column;
-  }
-  
-  
-  .player-area {
+#containerPai {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-area {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -32,15 +30,19 @@ body {
     padding: 10px;
     border-radius: 8px;
     height: 200px;
-    min-height: 100%;
-  }
-  
-  .play-area {
+}
+
+.play-area {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #33c93b;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 8px;
-    height: 400px;
-    min-height: 100%;
-  }
+    height: 250px;
+    overflow-y: auto;
+}
